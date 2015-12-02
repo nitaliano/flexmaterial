@@ -1,0 +1,34 @@
+@import 'variables.less';
+@import 'mixins/grid.less';
+
+.grid {
+  .make-grid();
+}
+
+.grid--hero {
+  margin: 0;
+}
+
+.grid--fixed {
+  flex-wrap: nowrap;
+}
+
+.grid--reversed {
+  .make-grid-reverse();
+}
+
+.column {
+  .make-column();
+}
+
+.column--half {
+  flex: 0 0 50%;
+}
+
+.column--full {
+  flex: 0 0 100%;
+}
+
+.column--stacked {
+  .make-column-stack();
+}
