@@ -1,1 +1,1 @@
-import './less/starter.less';
+require('./less/flexmaterial.less');

@@ -1,10 +1,11 @@
-import path from 'path';
-import autoprefixer from 'autoprefixer';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+var path = require('path');
+var autoprefixer = require('autoprefixer');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const LESS_LOADERS = ['css', 'postcss', 'less'];
+var LESS_LOADERS = ['css', 'postcss', 'less'];
+var PROJECT_NAME = 'flexmaterial';
 
-const AUTOPREFIXER_BROWSERS = [
+var AUTOPREFIXER_BROWSERS = [
 	'Android >= 4',
 	'Chrome >= 20',
 	'Firefox >= 24',
@@ -14,7 +15,7 @@ const AUTOPREFIXER_BROWSERS = [
 	'Safari >= 6'
 ];
 
-const config = {
+var config = {
 	entry: {
 		app: ['./src/index']
 	},
@@ -32,12 +33,12 @@ const config = {
 		]
 	},
 	output: {
-		filename: 'index.js',
-		path: path.join(__dirname, './dist'),
+		filename: PROJECT_NAME + '.js',
+		path: path.join(__dirname, '../dist'),
 		publicPath: '/dist'
 	},
 	plugins: [
-		new ExtractTextPlugin('index.css')
+		new ExtractTextPlugin(PROJECT_NAME + '.css')
 	],
 	postcss: [
 		autoprefixer(AUTOPREFIXER_BROWSERS)
@@ -48,4 +49,4 @@ const config = {
 	}
 };
 
-export default config;
+module.exports = config;
