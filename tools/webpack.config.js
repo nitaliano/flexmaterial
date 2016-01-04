@@ -17,7 +17,7 @@ var AUTOPREFIXER_BROWSERS = [
 
 var config = {
 	entry: {
-		app: ['./src/index']
+		app: ['./src/' + PROJECT_NAME]
 	},
 	module: {
 		loaders: [

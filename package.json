@@ -1,6 +1,7 @@
 {
   "name": "flexmaterial",
   "version": "0.0.1",
+  "author": "Nick Italiano",
   "scripts": {
     "build": "gulp build",
     "develop": "gulp build --watch & gulp serve"
@@ -18,5 +19,8 @@
     "style-loader": "*",
     "webpack": "*",
     "yargs": "^3.31.0"
+  },
+  "dependencies": {
+    "webcomponents.js": "^0.7.20"
   }
 }
