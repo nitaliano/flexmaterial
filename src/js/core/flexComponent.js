@@ -8,7 +8,7 @@ function FlexComponent() {
     this._observer = new MutationObserver(this.onMutation);
     this._observer.observe(document.body, { childList: true, attributes: true, characterData: true });
     
-    document.addEventListener('DOMContnetLoaded', this.onDomReady);
+    document.addEventListener('DOMContentLoaded', this.onDomReady);
 }
 
 FlexComponent.prototype.onDomReady = function (e) {
