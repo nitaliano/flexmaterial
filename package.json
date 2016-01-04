@@ -1,6 +1,7 @@
 {
   "name": "flexmaterial",
   "version": "0.0.1",
+  "author": "Nick Italiano",
   "scripts": {
     "build": "gulp build",
     "develop": "gulp build --watch & gulp serve"

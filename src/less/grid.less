@@ -11,6 +11,16 @@
 
 .grid--reversed {
   .make-grid-reverse();
+
+  .column--stacked {
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: @padding-sm;
+    }
+  }
 }
 
 .column {
