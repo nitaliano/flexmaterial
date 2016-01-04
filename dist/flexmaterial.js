@@ -119,16 +119,18 @@
 	    this._observer = new MutationObserver(this.onMutation);
 	    this._observer.observe(document.body, { childList: true, attributes: true, characterData: true });
 
-	    document.addEventListener('DOMContnetLoaded', this.onDomReady);
+	    document.addEventListener('DOMContentLoaded', this.onDomReady);
 	}
 
 	FlexComponent.prototype.onDomReady = function (e) {
 	    var self = this;
 
 	    this._componentClassNames.forEach(function (componentClassName) {
-	        document.querySelectorAll('.' + componentClassName).forEach(function (node) {
-	            self.addComponent(node, self._components[componentClassName].Constructor);
-	        });
+	        var nodes = document.querySelectorAll('.' + componentClassName);
+
+	        for (var i = 0; i < nodes.length; i++) {
+	            self.addComponent(nodes[i], self._components[componentClassName].Constructor);
+	        }
 	    });
 	};
 
